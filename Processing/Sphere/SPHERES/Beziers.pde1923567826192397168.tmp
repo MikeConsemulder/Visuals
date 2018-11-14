@@ -1,0 +1,61 @@
+int amountOfBoxes = 7;
+ArrayList<Box> boxes = new ArrayList<Box>();
+
+int boxCount = 0;
+
+void setup() {
+  
+  size(800, 800, P3D);
+  
+  for(int i = 0; i < amountOfBoxes; i++){
+    
+    boxes.add(new Box(100,100, 50));
+    
+  }
+  
+}
+
+void draw() {
+  
+   if(boxCount >= amountOfBoxes - 1){
+     
+     boxCount = 0;
+   }
+   
+   background(0);
+   stroke(153);
+   Box box = boxes.get(boxCount);
+   box.display();
+   
+}
+
+
+class Box {
+  int xPosition;
+  int yPosition;
+  int boxSize;
+  
+  // Contructor
+  Box(int xPos, int yPos, int size) {
+    
+    xPosition = xPos;
+    yPosition = yPos;
+    boxSize = size;
+
+  }
+  
+  void update() {
+    
+    
+  }
+  
+  
+  void display(){
+   
+    translate(xPosition, yPosition, 0);
+    rotateY(0);
+    noFill();
+    box(boxSize);
+  }
+  
+}
