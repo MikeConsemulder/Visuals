@@ -1,2 +1,2 @@
-# MidiController
-A MidiController boilerplate with Vue and webpack
+# Visuals
+Nice and trippy visuals 
