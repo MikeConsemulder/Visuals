@@ -20,9 +20,9 @@ export default class Container extends Vue {
 	private radius: number = 0;
 
 	private maxRadius: number = 1000;
-	private amountOfDots: number = 10;
-	private circleGrowSpeed: number = 1;
-	private circleCounterSpeed: number = 10;
+	private amountOfDots: number = 100;
+	private circleGrowSpeed: number = 0.5;
+	private circleCounterSpeed: number = 1;
 
 	private resetReady: boolean = false;
 
@@ -110,10 +110,11 @@ export default class Container extends Vue {
 
 
 		p5.fill(255, 0 , 0);
-		p5.ellipse(this.radius * p5.sin(angle * this.circleCounter), this.radius  * p5.cos(angle * this.circleCounter), 10, 10);
+		const randomsize = p5.random(5,15);
+		p5.ellipse(this.radius * p5.sin(angle * this.circleCounter), this.radius  * p5.cos(angle * this.circleCounter), randomsize, randomsize);
 	
-		this.radius  += this.circleGrowSpeed;
-		this.circleCounter += this.circleCounterSpeed;
+		this.radius  += this.circleGrowSpeed * p5.random(0.1, 1);
+		this.circleCounter += this.circleCounterSpeed * p5.random(1, 1.5);
 
 		if(this.resetReady || this.radius > this.maxRadius){
 
