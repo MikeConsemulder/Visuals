@@ -1,0 +1,19 @@
+/node_modules
+npm-debug.log
+.DS_Store
+.editorconfig
+dist/
+deploy/
+/coverage
+screenshots/
+videos/
+stats.json
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.env
