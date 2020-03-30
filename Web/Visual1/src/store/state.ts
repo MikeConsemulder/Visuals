@@ -7,7 +7,13 @@ const state: IState = {
     },
     input_messages: [],
     maxAmountIncommingMessages: 100,
-    actions: ['action1', 'action2', 'action3'],
+    actions: [
+        'maxRadius', 
+        'amountOfDots',
+        'circleGrowSpeed',
+        'circleCounterSpeed',
+        'reset'
+    ],
     actionActivators: {}
 };
 
